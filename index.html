@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rajeev Natarajan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Lora', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Lora', Georgia, serif; }
+    .label { font-family: 'Inter', system-ui, sans-serif; }
+  </style>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased">
+
+  <!-- Hero -->
+  <section class="pt-24 pb-16 px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <div
+        class="w-40 h-40 rounded-full mx-auto mb-8 ring-4 ring-stone-200"
+        style="background-image: url('RN-pic-final.jpg'); background-size: cover; background-position: center top;"
+        role="img" aria-label="Rajeev Natarajan"
+      ></div>
+      <h1 class="text-4xl font-medium tracking-tight text-stone-900 mb-3">
+        Rajeev Natarajan
+      </h1>
+      <p class="label text-sm tracking-widest uppercase text-amber-700 font-medium">
+        Coach &nbsp;·&nbsp; Researcher &nbsp;·&nbsp; Practitioner
+      </p>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="max-w-2xl mx-auto px-6">
+    <hr class="border-stone-200" />
+  </div>
+
+  <!-- About -->
+  <section class="py-16 px-6">
+    <div class="max-w-2xl mx-auto space-y-6 text-[1.0625rem] leading-relaxed text-stone-700 text-justify">
+      <p>
+        Rajeev has been associated with the <span class="text-stone-900 font-medium">TAO-Ritambhara gharana</span> since
+        2012 and is a co-founder of Ritambhara. In this journey, he has been immersing, understanding, and working with
+        various sources of Indic wisdom in individual and organization contexts, as well as frameworks for business
+        strategy, organization alignment, and role design — aligned with the ethos of creating teams that are human,
+        agile, and high-functioning. He is certified in life and executive coaching and the EUM assessment tools for
+        both individuals and organizations from TAO Leadership Academy, and is a certified Yoga Instructor (RYT-200)
+        from YogaVahini.
+      </p>
+      <p>
+        He works with organizations and leaders at different thresholds to enable their journey towards the "best that
+        they can be." An action-researcher at heart, his current passion is the TAO-Ritambhara action-research on the
+        <span class="text-stone-900 font-medium">Theory of Dharmic Firm</span> and an aligned measurement framework — a
+        response to the poly-crisis and a practical alternative to the prevalent models of organizations that are often
+        extractive.
+      </p>
+      <p>
+        He is an ardent practitioner of <span class="text-stone-900 font-medium">Veda Chanting</span> and loves to
+        explore, through learning and teaching, the journey with sound — and through that, the silence from which it
+        emerges.
+      </p>
+      <p>
+        Prior to joining TAO, he was part of several successful experiments. Over 18 years, he helped create
+        high-functioning software product development teams modelled after artisanal guilds — both in his start-up and
+        at a multinational organization. He also co-founded the first non-profit organic food store in Chennai.
+      </p>
+      <p>
+        He lives in <span class="text-stone-900 font-medium">Auroville</span> and feels blessed to have a wife and
+        daughter who co-journey in his quest of <em>"what does it mean to live in a yogic and dharmic way in today's
+        context."</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="max-w-2xl mx-auto px-6">
+    <hr class="border-stone-200" />
+  </div>
+
+  <!-- Book a Conversation -->
+  <section class="py-16 px-6">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-2xl font-medium text-stone-900 mb-2 text-center">Book a Conversation</h2>
+      <p class="label text-sm text-stone-500 text-center mb-10">
+        Find a time that works for you.
+      </p>
+      <div id="cal-embed" class="w-full overflow-hidden rounded-lg" style="min-height: 600px;"></div>
+    </div>
+  </section>
+
+
+  <!-- Cal.com embed -->
+  <script type="text/javascript">
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal;
+        let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {};
+          cal.q = cal.q || [];
+          d.head.appendChild(d.createElement("script")).src = A;
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          const api = function () { p(api, arguments); };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === "string") {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            p(cal, [L, namespace, ar[2]]);
+          } else {
+            p(cal, ar);
+          }
+          return;
+        }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+
+    Cal("init", { origin: "https://cal.com" });
+    Cal("inline", {
+      elementOrSelector: "#cal-embed",
+      calLink: "rajeevpn",
+      layout: "month_view"
+    });
+    Cal("ui", {
+      hideEventTypeDetails: false,
+      layout: "month_view",
+      styles: { branding: { brandColor: "#b45309" } }
+    });
+  </script>
+
+</body>
+</html>
